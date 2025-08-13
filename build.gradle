@@ -1,5 +1,5 @@
 plugins {
-	id 'io.micronaut.minimal.library' version '4.4.5'
+	id 'io.micronaut.minimal.library' version '4.5.4'
 }
 
 repositories {
@@ -8,11 +8,12 @@ repositories {
 
 dependencies {
 	implementation 'io.micronaut:micronaut-aop'
-	testImplementation 'org.junit.jupiter:junit-jupiter'
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.12.2'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 micronaut {
-	version '4.8.3'
+	version '4.9.2'
 	testRuntime 'junit5'
 	processing {
 		incremental true
