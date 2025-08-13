@@ -1,0 +1,25 @@
+plugins {
+	id 'io.micronaut.minimal.library' version '4.4.5'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'io.micronaut:micronaut-aop'
+	testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+micronaut {
+	version '4.8.3'
+	testRuntime 'junit5'
+	processing {
+		incremental true
+		annotations '*'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
